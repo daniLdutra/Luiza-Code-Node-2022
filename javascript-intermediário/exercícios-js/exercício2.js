@@ -5,7 +5,6 @@ const person = {
   lastName: 'Doe',
 };
 
-const { firstName } = person;
-const { lastName } = person;
+const { firstName, lastName } = person;
 
 console.log(firstName, lastName);
