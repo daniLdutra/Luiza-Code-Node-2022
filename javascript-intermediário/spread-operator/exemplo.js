@@ -1,4 +1,4 @@
-//O spread operator (espalhamento) permite que você expanda um objeto/array iterável para uso.
+//O spread operator (espalhamento) permite que você expanda um objeto/array iterável para uso. Utilizado para mergear as informações, atualizar as informações.
 
 // const person = {
 //   firstName: 'John',
@@ -26,9 +26,19 @@ let pessoa = {
     email: 'eduardo.pereira@luizalabs.com',
     telefone: '(11) 5555-5555',
   },
-  estado: 'São Paulo',
+  estado: 'SP',
   profissao: 'Desenvolvedor',
   empresa: 'Magalu',
 };
 
-console.log(pessoa);
+let alterarPessoa = {
+  ...pessoa,
+  nome: 'Eduardo Pereira',
+  contato: { ...pessoa.contato, telefone: '(13) 5555-5555' },
+  cidade: 'São Paulo', //adicionada nova informação
+};
+
+let returnPessoa = { ...pessoa, ...alterarPessoa }; // o spread 'final' será a última informação, criado um novo objeto com objeto anterior + alterado.
+
+//console.log(pessoa, alterarPessoa);
+console.log(returnPessoa); // retornado um novo objeto.
