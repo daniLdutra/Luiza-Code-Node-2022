@@ -4,13 +4,13 @@
  */
 
 const dados = ({ cpf, dataNasc, cep }) => {
-  const regexCpf = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+  const regexCpf = /^\d{3}\.\d{3}\.\d{3}-\d{2}$;
   const validationCpf = cpf.match(regexCpf);
 
-  const regexNasc = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+  const regexNasc = /^\d{2}\/\d{2}\/\d{4}$;
   const validationDataNasc = dataNasc.match(regexNasc);
 
-  const regexCep = /^[0-9]{5}-[0-9]{3}$/;
+  const regexCep = /^[0-9]{5}-[0-9]{3}$;
   const validationCep = cep.match(regexCep);
 
   return { validationCpf, validationDataNasc, validationCep };
