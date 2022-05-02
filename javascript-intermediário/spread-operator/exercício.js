@@ -22,7 +22,9 @@ let alterarPessoa = {
   cidade: 'Rio de Janeiro',
 };
 
-let nome = 'Daniella';
-let arraySpread = [...nome];
+// let nome = 'Daniella';
+// let arraySpread = [...nome];
+
+let arraySpread = [...alterarPessoa.empresa];
 
 console.log(alterarPessoa, arraySpread);
